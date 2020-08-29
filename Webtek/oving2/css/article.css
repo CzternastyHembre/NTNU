@@ -1,3 +1,6 @@
+body{
+  font-family:Georgia, Verdana, sans-serif;
+}
 article {
     width: 960px;
     margin: auto;
@@ -5,11 +8,15 @@ article {
 
 h1 {
     font-size: 3em;
-    margin-bottom: 0px; /* NOTE: ????? */
+    margin-bottom: 0;
 }
 
 header{
   border-bottom: 2px solid black;
+}
+
+#forfatter{
+  margin-top: 0;
 }
 
 h2 {
