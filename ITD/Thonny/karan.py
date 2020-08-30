@@ -1,11 +1,11 @@
 print("hei")
-spm = ["hvor gammel er mattis","hvor gammel er karan"]
-fasit = [18,19]
+spm = ["hvor gammel er mattis","hvor gammel er karan",'Hva er hovedstaten i Norge?']
+fasit = ['18','19','Oslo']
 i=0
 poeng = 0
-while i < 2:
+while i < len(spm):
     print(spm[i])
-    svar = int(input("Svar: "))
+    svar = (input("Svar: "))
     if fasit[i]==svar:
         poeng+= 1
         print("riktig svar")
