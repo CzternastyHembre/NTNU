@@ -1,9 +1,14 @@
 body{
   font-family:Georgia, Verdana, sans-serif;
+  line-height: 150%;
+  background-color: lightgrey;
+  color:#323232;
 }
 article {
     width: 960px;
     margin: auto;
+    width: 70ch;
+    font-size: 20px;
 }
 
 h1 {
@@ -16,7 +21,6 @@ header{
 }
 
 #forfatter{
-  margin-top: 0;
 }
 
 h2 {
@@ -40,7 +44,7 @@ img{
 }
 
 #facts > ul {
-    list-style-image: url('img/cup-icon.svg');
+    list-style-image: url("../img/cup-icon.svg"); /* NOTE: ikke funnet */
     line-height: 1.5em;
     padding-left: 1.5em;
 }
