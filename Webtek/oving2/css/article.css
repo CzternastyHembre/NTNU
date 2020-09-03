@@ -1,7 +1,7 @@
 body{
   font-family:Georgia, Verdana, sans-serif;
   line-height: 150%;
-  background-color: lightgrey;
+  background-color:lightgrey;
   color:#323232;
 }
 article {
@@ -22,7 +22,9 @@ header{
 
 #forfatter{
 }
-
+#p{
+  color: blue !important;
+}
 h2 {
     font-size: 1.8em;
 }
