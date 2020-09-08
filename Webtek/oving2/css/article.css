@@ -20,18 +20,13 @@ header{
   border-bottom: 2px solid black;
 }
 
-#forfatter{
-}
-#p{
-  color: blue !important;
-}
 h2 {
     font-size: 1.8em;
 }
 
 p, blockquote, ul, ol {
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 150%;
 }
 
 img{
