@@ -6,7 +6,7 @@ poeng = 0
 while i < len(spm):
     print(spm[i])
     svar = (input("Svar: "))
-    if fasit[i]==svar:
+    if fasit[i].lower()==svar.lower():
         poeng+= 1
         print("riktig svar")
     else:
