@@ -1,5 +1,3 @@
-print("hei")
-
 spm = ["hvor gammel er mattis","hvor gammel er karan",'Hva er hovedstaten i Norge?']
 fasit = ['18','19','Oslo']
 selv = str(input('vil du skrive inn spm selv? y/n: '))
