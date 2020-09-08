@@ -1,13 +1,13 @@
 body{
   font-family:Georgia, Verdana, sans-serif;
   line-height: 150%;
-  background-color:lightgrey;
   color:#323232;
+  background-color:lightgrey;
 }
 article {
-    width: 960px;
-    margin: auto;
+    /* width: 960px; */
     width: 70ch;
+    margin: auto;
     font-size: 20px;
 }
 
