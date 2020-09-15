@@ -1,0 +1,27 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Part 4 */
+
+.wrapper{
+  min-height: 100vh;
+  position: relative;
+}
+.content-wrapper{
+  padding-bottom: 2.5rem; /*Høyden til footeren, (for å få luft til den om det skulle være tekst der)*/
+}
+footer{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /*Høyden til footeren*/
+}
+ul li{
+  list-style-type: square;
+}
+ul ul li:last-child{
+  color: blue;
+}

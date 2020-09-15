@@ -1,0 +1,9 @@
+1. What is the difference between position: absolute and position: fixed ?
+  position:absolute er relativ til dens parents sine dimensjoner, så er position:fixed relativ den inisielle dimensjonene, som vanligvis er det du ser på siden, så den vil da befinne seg på samme sted på siden uavhenging om du scroller eller zoomer osv,
+
+2. With CSS3, how do we access the third element within another element?
+you use the :nth-child(n) selcetor and the n represents the number so for eksample
+ul:nth-child(3){
+  color:red;
+}
+will give the third element inside ul (the child) a red colored text
