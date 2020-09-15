@@ -16,6 +16,7 @@
       font-family: sans-serif;
       padding-top: 30px;
       margin-bottom: 40px;
+      text-align: center;
     }
 
     .box{
@@ -23,6 +24,11 @@
       border-color: #0060A3;
       border-style: solid;
       height: 400px;
+
+      position:fixed;
+      margin: auto;
+      margin-left: 25%;
+      width: 50%;
     }
 
     .one{
@@ -31,7 +37,7 @@
       border-width: 2px;
       border-color: #FAA21B;
       border-style: solid;
-    }
+      }
 
     .two{
       width: 100px;
@@ -40,6 +46,9 @@
       border-color: #FAA21B;
       border-style: solid;
       background-color: #fff;
+
+      position: absolute;
+      bottom: 0;
     }
 
     .three{
@@ -49,6 +58,9 @@
       border-color: #FAA21B;
       border-style: solid;
       background-color: #fff;
+
+      float: right;
+      margin-right: -50px !important;
     }
 
     .five{
@@ -56,6 +68,9 @@
       right: 10px;
       font-size: 35px;
       font-family: sans-serif;
+
+      position: absolute;
+      bottom: 0;
     }
 
     .four{
@@ -64,14 +79,37 @@
       border-width: 2px;
       border-color: #FAA21B;
       border-style: solid;
+
+      position: relative;
+      margin: auto;
+      top:25px;
     }
 
+    .box>*{
+      margin: 10px;
+    }
     /* Part 2 */
-
+    .five a{
+      color: blue;
+      text-decoration:none;
+    }
+    .five a:visited{
+      color: #454545;
+    }
+    .five a:hover{
+      color: red;
+    }
+    .five a:active{
+      opacity: 0.6
+    }
   </style>
 </head>
 <body>
-
+<!-- NOTE: 50kr per 50 skudd, instruktører, dekke bare utgifter totalt 100lapp på hver, anntakelse, ønnskelig på lørdag eller søndag helst 12på dagen
+få inn flere
+10 pers
+1 time per 5
+vente tidlogst til midten av oktober 8.-->
     <div class="header">
       <h1>Assignment 3: position</h1>
     </div>
@@ -83,7 +121,7 @@
         <div class="four"></div>
       </div>
       <div class="five">
-        CSS is awesome
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS is awesome</a>
       </div>
     </div>
 
