@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>4</title>
+    <style media="screen">
+      body{
+        min-height: 90vh;
+        min-width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+
+
+
+    <script>
+    let body = document.querySelector("body")
+    let x = false
+    function toggle(){
+      if (x) {
+        body.style.backgroundColor = "Green"
+        x = false
+      }
+      else {
+        x = true
+        body.style.backgroundColor = "Red"
+      }
+    }
+    toggle()
+    body.onclick = toggle
+
+
+    let dd, d, y
+    function start() {
+      dd = new Date()
+      y = true
+      tid()
+      loop()
+    }
+    function tid() {
+      d = new Date()
+      return d.getTime()-dd.getTime();
+    }
+    function loop() {
+      if (tid()>1500 && y && tid()<1750) {
+        toggle()
+        y = false
+      }
+      if (tid()>1900 && !y) {
+        y = true
+        toggle()
+      }
+        console.log(tid());
+      setTimeout(loop,10)
+    }
+    start()
+    </script>
+  </body>
+</html>
