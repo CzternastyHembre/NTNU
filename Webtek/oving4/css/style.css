@@ -12,11 +12,11 @@
     position: relative;
   }
 
-  video {
+  video, .stillImage{
     height: auto;
     width: 100%;
   }
-    
+
   #title {
     position: absolute;
     top: 50%;
@@ -24,17 +24,29 @@
     transform: translate(-50%, -50%);
   }
 
-  #title > img {
+  #title>img {
     width: 100%;
   }
 
   article {
-    width: 720px;
-    margin: 20px 50px;
+    width: 80%;
+    margin: 5% 10%;
   }
 
   p {
     color: black;
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  .stillImage{
+    display: none;
+  }
+  @media (max-width:940px) {
+      video{
+        display: none;
+      }
+      .stillImage{
+        display: block;
+      }
   }
