@@ -1,0 +1,18 @@
+1. Why do mobile phones usually ignore auto play on video elements?
+  If your are using your mobile data, it wouldn't be as desierable to use up that, and you are on your phone everywhere and some plases, you dont want a video to start making noice.
+
+2. What will the CSS snippet at the end of this section do if the visitor is browsing on a
+device with 320 x 568 resolution?
+  nothing happens, because your width is 320px, whitch is not between 768px to 1024px
+
+3. Mention some of the advantages of having a single responsive website instead of
+dedicated versions like m.til.no for mobile and til.no for desktop?
+  Its easier tho manage one site than two, and its less repeating code, and if you want to add a style if you are on a desktop(wide screen) its easier to add different style on new "types" of screen
+
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px) {
+    #logo {
+      display: none;
+    }
+  }
