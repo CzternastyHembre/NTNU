@@ -1,7 +1,7 @@
 
 50kr per 50 skudd, instruktører, dekke bare utgifter totalt 100lapp på hver (anntakelse)
 
-ønnskelig på lørdag eller søndag helst 12 på dagen 10 pers
+ønnskelig på lørdag eller søndag helst 12 på dagen 10 pers, søndag passer best for oss (OIL)
 1 time per 5
   
 få inn flere
