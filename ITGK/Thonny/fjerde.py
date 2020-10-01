@@ -3,6 +3,8 @@ y = (1,3,5,6)
 z = y + x
 print(z)
 a = ('hi',) * 5
-max(z)
-min(z)
-del(z)
+print(max(z))
+print(min(z))
+print(del(z))
+
+input('Enter to exit ')
