@@ -41,12 +41,20 @@ btns[0].addEventListener('click',changeDisplay)
 btns[1].addEventListener('click',changeVisibility)
 btns[2].addEventListener('click',reset)
 
+let i = 0
+const d = ['None','Block']
 function changeDisplay () {
-  box.style.display = 'None'
+  const dCycle = d.filter(states => d.indexOf(states) == i%d.length)
+  box.style.display = dCycle
+  i++
 }
 
+let j = 0 
+const v = ['Hidden','Visible']
 function changeVisibility () {
-  box.style.visibility = 'Hidden'
+  const vCycle = v.filter(states => v.indexOf(states) == j%v.length)
+  box.style.visibility = vCycle
+  j++
 }
 
 function reset () {
