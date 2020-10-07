@@ -112,3 +112,4 @@ def skriv_svar():
     exit()
 
 undersokerlse()
+
