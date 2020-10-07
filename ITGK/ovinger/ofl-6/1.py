@@ -1,4 +1,6 @@
-import random
-
+# lister
+liste = []
 for i in range(20):
-    print(random.randint(1, 4), end=' ')
+    liste.append(i)
+
+print(liste[3])
