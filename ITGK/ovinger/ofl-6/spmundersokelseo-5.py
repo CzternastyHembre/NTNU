@@ -9,7 +9,6 @@ timer_array = []
 antall_svar = 0
 
 def undersokerlse():
-#    global totalt
     global kvinner
     global menn
     global tar_fag
