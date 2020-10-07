@@ -6,3 +6,6 @@ for row in dager:
 
 
 print(dager)
+
+a = 12.0
+print(a.is_integer())
