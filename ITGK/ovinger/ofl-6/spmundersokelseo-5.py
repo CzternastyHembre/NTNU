@@ -1,23 +1,13 @@
 from sys import exit
 
-# Velkommen til spørreundersøkelsen!
-
-# Hvilket kjønn er du? [f/m]: f
-# Hvor gammel er du?: 21
-# Tar du et eller flere fag? [ja/nei ]: bleh
-# Tar du et eller flere fag? [ja/nei ]: ja
-# Tar du ITGK? [ja/nei]: ja
-# Hvor mange timer bruker du daglig (i snitt) på lekser?: 2
-#['Hvilket kjønn er du? [f/m]: f','Hvor gammel er du?: 21','Tar du et eller flere fag? [ja/nei ]: ','Tar du et eller flere fag? [ja/nei ]: ']
 kvinner = 0
 menn = 0
 tar_fag = 0
 tar_itgk = 0
 timer_snitt = 0
+timer_array = []
 antall_svar = 0
-totalt = [kvinner, menn, tar_fag, tar_itgk, timer_snitt, antall_svar]
-svar = []
-print('12'.isdigit())
+
 def undersokerlse():
 #    global totalt
     global kvinner
@@ -26,14 +16,20 @@ def undersokerlse():
     global tar_itgk
     global timer_snitt
     global antall_svar
+    global timer_array
 
     while True:
+        tar_itgk1 = 0
+        menn1 = 0
+        kvinner1 = 0
+        tar_fag1 = 0
+
         print('Velkommen til spørreundersøkelsen!')
 
         while True:
             kjonn = input('Hvilket kjønn er du? [f/m]: ').lower()
             if kjonn == 'hade':
-                exit()
+                skriv_svar()
             if kjonn == 'f':
                 kvinner1 = 1
                 break
@@ -44,9 +40,9 @@ def undersokerlse():
         while True:
             alder = input('Hvor gammel er du?: ')
             if alder == 'hade':
-                exit()
+                skriv_svar()
             if not alder.isdigit():
-                print('Skriv inn ett tall')
+                print('Skriv inn ett heltall')
                 continue
             alder = int(alder)
             if 16 <= alder and alder <= 25:
@@ -63,33 +59,57 @@ def undersokerlse():
         while True:
             fag = input('Tar du et eller flere fag? [ja/nei ]: ')
             if fag == 'hade':
-                exit()
+                skriv_svar()
             if fag == 'ja':
                 tar_fag1 = 1
                 ikke_ferdig = True
                 break
             if fag == 'nei':
-                tar_fag1 = 0
                 ikke_ferdig = False
                 break
         if ikke_ferdig:
             while True:
-                itgk = input('Tar du ITGK? [ja/nei]: ')
+                spm = 'Tar du ITGK? [ja/nei]: '
+                if alder1 >= 22:
+                    spm = 'Tar du virkelig ITGK? [ja/nei]: '
+                itgk = input(spm)
                 if itgk == 'hade':
-                    exit()
-                if itgk == 'f':
-                    kvinner1 = 1
+                    skriv_svar()
+                if itgk == 'ja':
+                    tar_itgk1 = 1
                     break
-                if itgk == 'm':
-                    menn1 = 1
+                if itgk == 'nei':
                     break
+            while True:
+                timer = input('Hvor mange timer bruker du daglig (i snitt) på lekser?: ')
+                if timer == 'hade':
+                    skriv_svar()
+                if not timer.isdigit():
+                    print('Skriv inn ett heltall')
+                    continue
+                timer = int(timer)
+                timer_array.append(timer)
+                break
 
-        timer = int(input('Hvor mange timer bruker du daglig (i snitt) på lekser?: 2'))
-
-
-
-        menn += menn1
         kvinner += kvinner1
+        menn += menn1
+        tar_fag += tar_fag1
+        tar_itgk += tar_itgk1
+        sum_timer = 0
+        for i in timer_array:
+            sum_timer += i
+        timer_snitt = sum_timer/len(timer_array)
+        antall_svar += 1
 
+
+
+def skriv_svar():
+    print('Resultat av undersøkelse!')
+    print('Antall kvinner:', kvinner)
+    print('Antall menn:', menn)
+    print('Antall personer som tar fag:', tar_fag)
+    print('Antall personer som tar ITGK:', tar_itgk)
+    print('Antall timer i snitt brukt på lekser :', timer_snitt)
+    exit()
 
 undersokerlse()
