@@ -97,9 +97,8 @@ def undersokerlse():
         sum_timer = 0
         for i in timer_array:
             sum_timer += i
-        timer_snitt = sum_timer/len(timer_array)
+        timer_snitt = sum_timer / len(timer_array)
         antall_svar += 1
-
 
 
 def skriv_svar():
@@ -111,5 +110,5 @@ def skriv_svar():
     print('Antall timer i snitt brukt på lekser :', timer_snitt)
     exit()
 
-undersokerlse()
 
+undersokerlse()
