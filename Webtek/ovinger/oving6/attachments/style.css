@@ -1,0 +1,22 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin: 10% auto;
+    text-align:left;
+    background-color: antiquewhite;
+    color: #232323;
+    text-align: center;
+}
+form{
+    border: black 2px;
+    border-style: solid;
+    padding: 2ch;
+    display: inline-block;
+    text-align: initial;
+}
+form *{
+    background-color: inherit;
+}
+input{
+    margin: 5px;
+}

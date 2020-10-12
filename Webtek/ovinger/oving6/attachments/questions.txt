@@ -1,0 +1,16 @@
+1. Why does the following expression 0.1 + 0.2 === 0.3 evaluate to false in Javascript?
+-Because it gets translatet to binary and some number cant be written in the amount of bits, ie in the decimal system 1/3 + 1/3 if you write them down ass 0.33 or how many decimals you have room for, lets say we have 2 decimals, 0.33 + 0.33 === 0.67, this will also be false. decimals in computers is written as 1/2 + 1/4 + 1/8 so some float numbers that work well in the decimal system, doenst work in the binary...
+
+2. What does the method attribute on a form element decide?
+-It decides which HTTP method to send the data, your can use post or get.
+
+3. Explain why the form fields appear in the URL when the method on form element is
+changed to GET ?
+-That is how HTTP GET works, it has a get function that will send you to the right url within
+
+4. Why is it considered bad practice to only validate form input with HTML5 and/or
+Javascript?
+-Because you cant manually change that from your computer, remove the "requierd" attribute in the inspect from the browser.
+
+5. When is it appropriate to use textarea over input ?
+-When you are going to write a comment or review, or a long text. Because the textarea can hold an unlimited amount of charaters

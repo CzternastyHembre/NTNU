@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+
+            <label for="name">
+                Full name:
+                <input type="name" name="name" id="name">
+            </label>
+            <br>
+            <label for="gender">
+                Gender:
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+            <br>
+            <label for="email">
+                Email:
+                <input type="email" name="email" id="email">
+            </label>
+            <br>
+            <label for="birthdate">
+                Birthdate:
+                <input type="date" name="birthdate" id="birthdate" min="1988-01-01">
+            </label>
+            <br>
+            <label for="hero">
+                Hero name:
+                <input required type="text" name="hero" id="hero">
+            </label>
+            <br>
+            <label for="spandex">
+                Do you wear spandex?:
+                <input type="checkbox" name="spandex" id="spandex">
+            </label>
+            <br>
+            <label for="strength">
+                Strength (1-10):
+                <input type="number" name="strength" id="strength" min="1" max="10">
+            </label>
+            <br>
+            <label for="speed">
+                speed (1-10):
+                <input type="number" name="speed" id="speed" min="1" max="10">
+            </label>
+            <br>
+            <label for="intelligence">
+                Intelligence (1-10):
+                <input type="number" name="intelligence" id="intelligence" min="1" max="10">
+            </label>
+            <br>
+
+            <label for="income">
+                Income:
+                <input type="number" name="income" id="income" min="0">
+            </label>
+            <br>
+            <label for="wealth">
+                Wealth:
+                <input type="number" name="wealth" id="wealth" min="0">
+            </label>
+            <br>
+            <label for="tax">
+                Tax:
+                <input type="number" name="tax" id="tax" min="0">
+            </label>
+            <br>
+
+
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <script>
+
+const inpIncome = document.querySelector('#income')
+const inpWealth = document.querySelector('#wealth')
+const inpTax = document.querySelector('#tax')
+
+inpWealth.oninput = inpIncome.oninput = tax
+
+function tax() {
+    inpTax.value = 0.35*inpIncome.value + 0.25*inpWealth.value
+}
+
+        </script>
+    </body>
+</html>
