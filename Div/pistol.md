@@ -7,3 +7,7 @@ vente tidlogst til midten av oktober 8.
 
 
 1. NOV EL 8. NOV
+
+Høre ang hvordan komme seg dit, med buss eller hva løsningen bblir,
+
+kvittering...
