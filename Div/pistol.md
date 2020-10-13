@@ -4,3 +4,6 @@ få inn flere
 10 baner corona
 1 time per 5
 vente tidlogst til midten av oktober 8.
+
+
+1. NOV EL 8. NOV
