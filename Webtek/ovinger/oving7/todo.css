@@ -1,3 +1,13 @@
 .done {
     text-decoration: line-through;
 }
+h2{
+    display: inline;
+}
+i{
+    display: block;
+}
+li{
+    margin: 1ch;
+    /* list-style-type: none; */
+}
