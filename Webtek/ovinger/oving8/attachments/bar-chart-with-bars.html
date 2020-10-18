@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tax forms: Bar chart with lines</title>
-    <meta charset="UTF-8">
-    <script src="taxForms.js"></script>
-    <style>
-      canvas{
-        border: solid 1px black;
-      }
-    </style>
-  </head>
-  <body>
 
-    <canvas id="chart" width="700" height="550"></canvas>
+<head>
+  <title>Tax forms: Bar chart with lines</title>
+  <meta charset="UTF-8">
+  <script src="taxForms.js"></script>
+  <style>
+    canvas {
+      border: solid 1px black;
+    }
+  </style>
+</head>
 
-    <script>
-      const canvas = document.getElementById('chart');
-      const context = canvas.getContext('2d');
+<body>
 
-      /* Draw a line from (fromX, fromY) to (toX, toY) */
-      function drawLine(fromX, fromY, toX, toY) {
-        context.beginPath();
-        context.moveTo(toX, toY);
-        context.lineTo(fromX, fromY);
-        context.stroke();
-      }
+  <canvas id="chart" width="700" height="550"></canvas>
 
-      /* Draw a text (string) on (x, y) */
-      function drawText(text, x, y) {
-        context.fillStyle = 'black';
-        context.fillText(text, x, y);
-      }
+  <script>
+    const canvas = document.getElementById('chart');
+    const context = canvas.getContext('2d');
 
-      /* Draw a text and with a line to its right */
-      function drawLineWithText(text, fromX, fromY, toX, toY) {
-        drawText(text, fromX - 50, fromY + 10);
-        drawLine(fromX, fromY, toX, toY);
-      }
+    /* Draw a line from (fromX, fromY) to (toX, toY) */
+    function drawLine(fromX, fromY, toX, toY) {
+      context.beginPath();
+      context.moveTo(toX, toY);
+      context.lineTo(fromX, fromY);
+      context.stroke();
+    }
 
-      
-      /* Insert your code here. */
-      let x = 50
-      let y = 50
-      for (let i = 1; i < 11; i++){
-        drawLineWithText(String(i*10000),50,(11-i)*550/11,500,(11-i)*550/11)
+    /* Draw a text (string) on (x, y) */
+    function drawText(text, x, y) {
+      context.fillStyle = 'black';
+      context.fillText(text, x, y);
+    }
+
+    /* Draw a text and with a line to its right */
+    function drawLineWithText(text, fromX, fromY, toX, toY) {
+      drawText(text, fromX - 50, fromY + 10);
+      drawLine(fromX, fromY, toX, toY);
+    }
+
+
+    /* Insert your code here. */
+    // Varriables it does actually work to add more elements in if you change the variables accordingly...
+    let wCanvas = 500
+    let hCanvas = 500
+    let margin = 50
+    let smallMargin = margin / 2
+    let widthBar = 50
+
+    // for-loop to draw the lines
+    for (let i = 1; i < 11; i++) {
+      drawLineWithText(String(i * 10000), margin, hCanvas + margin - i * (hCanvas + margin) / 11, margin + wCanvas,
+        hCanvas + margin - i * (hCanvas + margin) / 11)
+    }
+
+    // function to draw rectangles width color
+    function drawRect(x, y, w, h, color) {
+      context.fillStyle = color
+      context.fillRect(x, y, w, h)
+
+    }
+
+    // function to draw the labes with a colored rectangle
+    function label(text, x, y, w, h, color) {
+      drawText(text, x + w + 5, y + h / 2)
+      drawRect(x, y, w, h, color)
+    }
+    // drawing the two labels
+    label('Income', wCanvas + margin + smallMargin, 50, 60, 30, 'red')
+    label('Wealth', wCanvas + margin + smallMargin, 100, 60, 30, 'blue')
+
+
+    // function to draw the graph
+    function drawGraph(obj) {
+      for (let i = 0; i < obj.length; i++) {
+        let incomeProsent = obj[i].income / 100000
+        let wealthProsent = obj[i].wealth / 100000
+        drawRect(i / (obj.length - 1) * (wCanvas - 2 * smallMargin - 2 * widthBar*1.1) + smallMargin + margin, hCanvas + margin, widthBar, -incomeProsent * 550 / 11, 'red')
+        drawRect(i / (obj.length - 1) * (wCanvas - 2 * smallMargin - 2 * widthBar*1.1) + smallMargin + margin + widthBar*1.1, hCanvas + margin, widthBar, -wealthProsent * 550 / 11, 'blue') // widthBar*1.1 to get 10% of the width of the cylinder to apart the correlating graphs
       }
-      function drawRect(x,y,w,h,color) {
-        context.fillStyle = color
-        context.fillRect(x,y,w,h)
-        
-      }
-      function label(text,x,y,w,h,color) {
-        drawText(text,x+w+5,y+h/2)
-        drawRect(x,y,w,h,color)
-      }
-      label('Income',510,50,60,30,'red')
-      label('Wealth',510,100,60,30,'blue')
-    </script> 
-  </body>
+    }
+    drawGraph(taxForms)
+  </script>
+</body>
+
 </html>
