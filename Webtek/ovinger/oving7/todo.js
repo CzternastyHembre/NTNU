@@ -10,6 +10,7 @@ const boxStatus = document.querySelector("#boxStatus")
 let checkboxes = []
 let listeElementer = []
 
+//Eventlisteners
 btnAdd.onclick = btnRemoveLast.onclick = btnRemoveAll.onclick = write //kaller funksjonen når den klikkes
 
 //Funksjoner
@@ -27,7 +28,7 @@ function write(event) {
         addTask() //Kjører addtask
     }
 
-    changeStatus() //Kjører endrestatus fordi når man legger til ett element vil totale tasks øke
+    changeStatus()
 
     ul.innerHTML = ""
     for (let i = listeElementer.length - 1; i >= 0; i--) { //appender listene i arrayet men starter på slutten og ender på starten for å skrive ut i riktig rekkefølge
