@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button value="klasse1" onclick="test(1)" class="btn" id="btn1">1</button>
+    <button value="klasse2" onclick="test(2)" class="btn" id="btn">2</button>
+    <table>
+    </table>
+    <script>
+const knapper = document.querySelectorAll(".btn")
+const btn1 = document.querySelector("#btn1")
+const mndag = document.querySelector("mandag1")
+const tbl = document.querySelector("table")
+const tabell = [
+
+    [
+        ['Matte','Engelsk','Gym'],
+        ['Fr','im',''],
+        ['Norsk','Sammdfunsagodgfpod','']
+    ],
+    [
+        ['Norsk','Sammdfuns agodgfpod',''],
+        ['Engelsk','Engelsk','Gym'],
+        ['Fr','im','Tage']
+    ]
+
+]
+
+const tider = ['0800-0930','1212-1212','3434-3544']
+
+const tabellHead = ['Tid/dag','Man','Tir','Ons']
+
+function test(n) {
+    let klasse = n-1
+    tbl.innerHTML = ""
+
+    let tblh = document.createElement("tr")
+    
+    for (let i = 0; i < tabellHead.length; i++) {
+        let tbltdh = document.createElement('th')
+        tbltdh.innerHTML = tabellHead[i]
+        tblh.appendChild(tbltdh)
+
+        
+    }
+    tbl.appendChild(tblh)
+    for (let i = 0; i < tabell[klasse].length; i++) {
+        
+
+        let tr = document.createElement("tr")
+        let tdvenstre = document.createElement("td")
+        tdvenstre.innerHTML=[tider[i]]
+        tr.appendChild(tdvenstre)
+
+
+        for (let j = 0; j < tabell[klasse].length; j++) {
+            const element = tabell[klasse][i][j];
+
+            let td = document.createElement("td")
+            td.innerHTML = element
+            tr.appendChild(td)   
+        }     
+        tbl.appendChild(tr)   
+    }
+}
+test(1)
+    </script>
+</body>
+</html>
