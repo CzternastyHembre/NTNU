@@ -1,0 +1,38 @@
+1. When calling getContext('2d') on a Canvas element, it will return a drawing context
+(i.e. the type of canvas) - in this case a two-dimensional context. How can we get a threedimensional context instead?
+-  you have to call either getContext('"webgl') og getContext('"webgl2'), but the contexts are only available on browsers that support the corresponding version
+
+2. How would you create a blue circle using the Canvas element? Explain with words or code.
+you can use an inbuildt function called arc, which the the paremeters:
+
+but first, start with
+context(the context of the canvas).beginPath()
+
+then 
+context. arc(x, y, radius, startAngle, endAngle, anticlockwise)
+
+x and y is the center of the arc, and radius says itself....
+the angles are messured in radians, not degrees so a full sircle is from 0 to 2pi
+the last argument doesnt bother us because where going to draw the whole circle, but its automaticly set to false (clockwise)
+
+to make the circle blue it its the command
+context.fillstyle = 'blue'
+
+and at last 
+context.fill()
+
+here is a pracical example:{
+    context.beginPath()
+    context.arc(250,250,50,0,Math.PI*2,true)
+    context.fillStyle = 'blue'
+    context.fill()
+}
+
+
+3. What is a more terse (also known as shorter) way of writing the loop in the following using
+the Array.filter method?
+
+yes, this for example:{
+      const countries = ['Norway', 'Sweden', 'Denmark', 'New Zealand'];
+      const countriesStartingWithN = countries.filter(country => country.startsWith('N'))
+}
