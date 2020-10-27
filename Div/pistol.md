@@ -11,3 +11,6 @@ vente tidlogst til midten av oktober 8.
 Høre ang hvordan komme seg dit, med buss eller hva løsningen bblir,
 
 kvittering...
+
+
+Faktura ? kjøpe brus til alle(?) reise, antall, pris, oppsett..
