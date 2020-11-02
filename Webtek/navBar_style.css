@@ -1,0 +1,470 @@
+
+/*ALLE SIDENE*/
+
+body{
+    background-color: rgb(40, 34, 46);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: white;
+    margin:0px;
+}
+
+h1{
+    font-size: 24pt;
+}
+
+h2{
+    font-size: 20pt;
+}
+
+.kropp{
+    margin: 20px;
+    margin-top: 85px;
+}
+
+.kropp a:hover {
+    color: rgb(187, 118, 252);
+}
+
+
+.navbar {
+    height: 70px;
+    background-color: black; 
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.445);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1; /*plasserer denne foran resten av innholdet i bodyen*/
+
+}
+  
+.navBarDiv {
+    height: 70px;
+    float: right; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; 
+    text-decoration: none; 
+    width: 10%;
+    margin: 0 0 0 2px; 
+    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Verdana', 'Geneva', Tahoma, sans-serif;
+    overflow:visible;
+}
+
+  
+.navBarDiv0 {
+    height: 100%;
+    float: left; 
+    display: flex; 
+    justify-content: left;
+    align-items: center;
+    color: white;
+    text-align: center; 
+    text-decoration: none; 
+    margin: 0 0 0; 
+    
+}
+  
+#logo {
+    height: 60px;
+    width: 100px;
+    position: absolute;
+    float:left;
+    top: 3px;
+    left: 10px;
+}
+
+
+.logoTxt{
+    display: inline;
+}
+
+#logoTxt1{
+    margin-left: 130px;
+    font-size: 22pt;
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    letter-spacing: 6px;
+    margin-top: -20px;
+}
+
+#logoTxt2{
+    font-size: 14pt;
+    margin-top: 22px;
+    margin-left: -50px;
+    font-style: oblique;
+}
+
+#logoTxt3, #logoTxt4, #logoTxt5{
+    display: none;
+}
+
+
+.logoTxt{
+    margin-left: 0;
+    color: cornsilk;
+    color: rgb(239, 226, 255);
+}
+
+  
+#navBarSkille {
+    margin: 0 -4% 0 -4.5%;
+    font-size: 30pt;
+    font-weight: lighter;
+    color: rgb(239, 226, 255, 0.151);
+}
+
+#siste{
+    margin-right: 3%;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* "Kinoprogram" */
+.dropbutton {
+    background-color: inherit;
+    color: white;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.navBarDiv:hover, .navBarDiv:focus {
+    font-size: 14pt;
+}
+
+
+
+
+.dropdown-content {
+    padding: 10px;
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.219);
+    z-index: 1;
+    top: 70px;
+
+}
+
+#dropdown:hover .dropdown-content,  .dropbutton:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+}
+  
+
+.dropdown-content a:hover {
+    background-color: rgb(63, 24, 58);
+    background-color: rgba(190, 122, 253, 0.295);
+    border-radius: 50px;
+}
+  
+
+
+
+#kinoprgrm{
+    font-weight: bold;
+}
+
+
+#sjangere a{
+    margin-top: 20px;
+}
+
+
+
+
+.hamButton{
+    position: absolute;
+    float: right;
+    z-index: 1000;
+    right: 10px;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.hamburgerDiv{
+    display: none;
+}
+
+#closeButton{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 1080px){
+
+    #logo{
+        left: 100px;
+    }
+
+    #logoTxt1{
+        float: center; 
+        margin-left: 210px;
+    }
+
+    .navBarDiv{
+        display: none;
+    }
+
+    .hamButton{
+        display: none;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 500px){
+
+    #logoTxt1, #logoTxt2{
+        display: none;
+    }
+
+
+    #logoTxt3, #logoTxt4, #logoTxt5{
+        display: inline;
+    }
+
+    #logoTxt3, #logoTxt4, #logoTxt5{
+        display: inline;
+    }
+
+    #logoTxt3{
+        margin-left: 215px;
+        font-size: 10pt;
+        font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+        letter-spacing: 6px;
+    }
+
+    #logoTxt4{
+        font-size: 16pt;
+        font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+        letter-spacing: 6px;
+    }
+
+    #logoTxt3{
+        font-size: 10pt;
+        font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+        left: 100px;
+    }
+
+    #logo {
+        height: 60px;
+        width: 100px;
+        position: absolute;
+        float: left;
+        top: 3px;
+        left: 100px;
+    }
+
+}
+
+
+
+/*Hamburgermeny*/
+@media only screen and (max-width: 1080px) and (max-width: 500px){
+
+    .navBarDiv{
+        display: none;
+    }
+
+
+    .hamButton{
+        display: block;
+    }
+
+
+    #closeButton{
+        color: white;
+        border: none;
+        background-color: transparent;
+        font-size: 25px;
+        float: right;
+        z-index: 1000;
+        right: 10px;
+        margin: 10px;
+        overflow: hidden;
+    }
+    
+
+
+
+     /*Hamburgermeny
+
+    .hamButton{
+        position: absolute;
+        display: block;
+        float: right;
+        z-index: 1000;
+        top: 70px;
+        right: 10px;
+        margin: 10px;
+        width: 36px;
+        height: 36px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        overflow: hidden;
+        background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+        background-size: 100%;
+        font-size: 25px;
+    }
+
+    .showClose {
+        background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+    }
+
+    
+    .hamburgerDiv {
+        z-index: 2;
+        position: absolute;
+        margin-top: 70px;
+        top: 70px;
+        right: 0;
+        background: black;
+        width: 40vw;
+        height: 70vh;
+        text-align: center;
+        overflow: hidden;
+        color: white;
+        hide the menu above the screen by default 
+        transform: translateY(-100%);
+        transition adds a little animation when sliding in and out the menu
+        transition: transform 0.2s ease;
+    }
+
+
+    .showNav {
+        transform: translateY(0);
+    }
+    
+    .navbar {
+        overflow: hidden;
+    }
+    
+
+    .icon{
+        font-size: 25px;
+        display: block;
+        position: absolute;
+        float: right;
+        left: 10px;
+        margin: 10px;
+        top: 0;
+    }
+
+
+    .hamburgerDiv li, .hamburgerDiv a{
+        display: block;
+        position: absolute;
+        float: left;
+        left: 10px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    .hamburgerDiv .icon:hover {
+        background-color: rgba(172, 171, 171, 0.075);
+    }
+    */
+
+    .hamburgerDiv li:hover {
+        font-size: 14px;
+    }
+
+    .dropdown-content a{
+        font-size: 10px;
+    }
+
+    .dropdown-content a:hover{
+        font-size: 12px;
+    }
+
+    ul, li{
+        list-style-type: none;
+    }
+    
+}
+
+
+
+
+/*Andre farger1
+body{
+    background-color: rgb(39, 38, 36);
+}
+
+.logoTxt{
+    color: cornsilk;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 248, 220, 0.199);
+}
+*/
+
+
+/*Andre farger 2
+body{
+    background-color: rgb(166, 173, 207);
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background-color: rgb(117, 129, 189); 
+    box-shadow: 0px 0px 16px 4px rgba(29, 32, 48, 0.2);
+}
+
+.logoTxt{
+    color: rgb(17, 26, 107);
+}
+
+.dropbutton {
+    color: black;
+}
+
+.dropdown-content {
+    background-color: rgb(117, 129, 189);
+    box-shadow: 0px 8px 16px 4px rgba(29, 32, 48, 0.2);
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(220, 221, 255, 0.199);
+}
+
+*/
