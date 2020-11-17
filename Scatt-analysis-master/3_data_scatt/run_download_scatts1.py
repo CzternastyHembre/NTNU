@@ -2,8 +2,8 @@ import urllib,urllib2
 from bs4 import BeautifulSoup
 import os, time
 
-url = 'http://ematch.scatt.com/download/'
-file_name_source = 'ematch_web.txt'
+url = '../Scatt catalog'
+file_name_source = 'Bjønnes 16-09-20 22-56-07'
 out_folder = 'ematch/'
 
 time_delay_sec = 1
