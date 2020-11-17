@@ -93,7 +93,7 @@ def movePiece():
 
     moveP(y1, x1, y2, x2)
 
-    #print(checkMate())
+   # print(checkMate(),'a')
     if checkChess():
         print('Du er i sjakk mann')
         undoLastMove()
@@ -138,7 +138,7 @@ def checkRecognisable(move):
     return False
 
 
-def legalMove(y1, x1, y2, x2, chkTurn):
+def legalMove(y1, x1, y2, x2, chkTurn, test = False):
     if board[y1][x1].upper() == 'P':  #Pawn
         if board[y2][x2] == 'empty':
             if y1-y2 == orientation[chkTurn] and x1 == x2:  # 1 forward
@@ -172,7 +172,7 @@ def legalMove(y1, x1, y2, x2, chkTurn):
                     return True
 
             if board[y1][x1].upper() == 'KING':  # King
-                if legalKing(y1, x1, y2, x2):
+                if legalKing(y1, x1, y2, x2, test):
                     return True
 
     if turn == chkTurn:
@@ -209,8 +209,8 @@ def legalRook(y1, x1, y2, x2):
     return False
 
 
-def legalKing(y1, x1, y2, x2):
-    if abs(y2-y1) <= 1 and abs(x2-x1) <= 1:
+def legalKing(y1, x1, y2, x2, test = False):
+    if abs(y2-y1) <= 1 and abs(x2-x1) <= 1 and not test:
         kingPos[turn]['y'] = y2
         kingPos[turn]['x'] = x2
         return True
@@ -224,27 +224,39 @@ def checkChess():
     for i in range(8):
         for j in range(8):
             if legalMove(i, j, kingPos[turn]['y'], kingPos[turn]['x'], chkTurn):
+                print(i, j, kingPos[turn]['y'], kingPos[turn]['x'], chkTurn)
                 return True
     return False
 
 
 def checkMate():
+    checkboard = board.copy()
+    if turn == 'WHITE':
+        chkTurn = 'black'
+    else:
+        chkTurn = 'WHITE'
     for i in range(8):
         for j in range(8):
             for k in range(8):
                 for m in range(8):
-                    if legalMove(i, j, k, m, turn):
-                        #moveP(i, j, k, m)
-                        pp = board[k][m]
-                        board[k][m] = board[i][j]
-                        board[i][j] = 'empty'
-                        if checkChess():
-                            board[i][j] = board[k][m]
-                            board[k][m] = pp
-                        else:
-                            board[i][j] = board[k][m]
-                            board[k][m] = pp
-                            return True
+                    for l in range(8):
+                        for n in range(8):
+
+                            if legalMove(i, j, k, m, turn, True):
+
+                                #moveP(i, j, k, m)
+                                pp = checkboard[k][m]
+                                checkboard[k][m] = checkboard[i][j]
+                                checkboard[i][j] = 'empty'
+                                if legalMove(l, n, kingPos[turn]['y'], kingPos[turn]['x'], chkTurn, True):
+                                    if checkChess():
+                                        checkboard[i][j] = checkboard[k][m]
+                                        checkboard[k][m] = pp
+                                    else:
+                                        checkboard[i][j] = checkboard[k][m]
+                                        checkboard[k][m] = pp
+                                        print(i, j, k, m)
+                                        return True
     return False
 
 
