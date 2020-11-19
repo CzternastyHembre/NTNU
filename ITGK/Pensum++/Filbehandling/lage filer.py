@@ -17,4 +17,4 @@ def skrivFilFraListe(filnavn):
             liste.append(text+'\n')
         file.writelines(liste)
 
-skrivFilFraListe('Min andre fil')
+skrivFilFraListe('tallfil')
