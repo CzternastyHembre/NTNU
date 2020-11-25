@@ -17,7 +17,7 @@ pieces = {
     'KING': '♚',
     'king': '♔',
 
-    'empty': ''
+    'empty': '⬛'
 }
 kingPos = {
     'WHITE': {
