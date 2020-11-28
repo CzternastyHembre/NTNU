@@ -1,0 +1,34 @@
+Forklar kort hvorfor datamaskiner ofte har et minnehierarki bestående av registre, cache, primærminne (RAM)
+og sekundærminne.
+
+    Fordi det er ofte vi trenger rask tilgang til til minne, andre gange skal vi hente store filer, og de forskjellige minnene har forskjellig hastighet, karakteristikk og lagringskapasitet
+
+
+Forklar kort hvordan analog lyd kan overføres og representeres i en datamaskin:
+
+    Det lagres i forskjellige frekvenser og har forskjellige lydnivåer basert på frekvensen ADC, samplingsfrekven
+
+
+Forklar kort hvorfor tekstkodingen UTF-8 er bedre egnet for koding av tekst på websider enn det ASCII er:
+
+    UTF-8 kom etter ASCII og inneholder et mye større registe av symboler og bokstaver, så den takler neste alle språk i verden
+
+
+Forklar kort forskjellen på destruktiv (lossy) og tapsløs (lossless) kompresjon og beskriv bruksområder for
+begge:
+
+    Lossy komprimering brukes for eksempel når man skal sende bilder og videoer over nett på veldig store størrelser og bruker algoritmer og ser på likheter og mønstre og gjør bildet veldig likt ved å korte ned på repeterende farger og tall
+    Lossless er en duplikat av filen som vi være identisk som filen, dette kan brukes når man for-eksempel skal sende tekstfiler og kodefiler som trenger å være idntiske
+
+
+Forklar kort forskjellen på linjesvitsjing (circuit switching) og pakkesvitsjing (packet switching) i nettverk:
+
+    Pakkesvitsjing i nettverk er når man deler opp dataen man skal sende i pakker for så å sende de forskjellige pakkene i forskjellige "ruter" for at man skal få så mye som mulig, så fort som mulig og brukes ofte i videosamtaler hvor tid er viktigere enn kvalitet
+    Linjesvitching i nettverk er når det er stor pågang i et 'Mellomstopp' og den er nødt til å velge enn annen rute
+
+
+Et firma blir stadig vekk angrepet med replay. Hvilke sikkerhetsteknologier bør firmaet bruke mot et slikt
+angrep?
+
+    **********************************************************************
+    merke pakke med bestemt id

@@ -6,7 +6,11 @@ for i in range(3,0,-1):
     time.sleep(1)
 
 
-for i in range(100):
-    for i in range(3):
+for i in range(50):
+    for i in range(5):
         pyautogui.press('right')
+        pyautogui.press('right')
+        pyautogui.press('down')
+    pyautogui.press('up')
+
 
