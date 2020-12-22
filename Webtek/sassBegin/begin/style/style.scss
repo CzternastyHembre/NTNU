@@ -1,0 +1,38 @@
+$PrimaryBtn : rgb(185,100,100);
+$textColor : rgb(40,40,40);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+@mixin sofus {
+    background-color: pink;
+}
+header {
+    @include flexCenter();
+
+    background-color: lightblue;
+    color: $textColor;
+
+
+    button{
+        width: 20vw;
+        &:hover{
+            background-color: red;
+            &::after{
+                content: 'Ye'; 
+            } 
+        }
+    }
+    h1{
+        @include sofus()
+    }
+
+
+}
+
+button{
+    background: $PrimaryBtn;
+}
+

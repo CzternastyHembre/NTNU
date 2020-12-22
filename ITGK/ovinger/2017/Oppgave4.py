@@ -29,22 +29,11 @@ def values_december():
 
 
 def genTides():
-    first, period = values_december()
-
-    seconds_a_day = 24*60**2
-    seconds_in_desember = 31*seconds_a_day
-
-    tides = []
-
-    last_period = first
-
-    while last_period < seconds_in_desember:
-        tides.append(last_period)
-        last_period += period//2
-
-    lows = tides[::2]
-    highs = tides[1::2]
-    return lows, highs
+    (first, period), tides, seconds_in_desember = values_december(), [], 31*24*60**2
+    while first < seconds_in_desember:
+        tides.append(first)
+        first += period//2
+    return tides[::2], tides[1::2]
 
 
 def genTidesStr(lst):
