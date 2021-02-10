@@ -1,25 +1,56 @@
 import pyautogui ,time
-print('stating in: ', end='')
 
+
+
+def aa():
+
+    for i in range(20):
+        pyautogui.click()
+        time.sleep(0.6)
+
+    for i in range(1000):
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        time.sleep(7)
+        print(i, end= " ")
+
+    for i in range(1000):
+        pyautogui.click()
+        time.sleep(0.6)
+
+
+print('stating in: ', end='')
 for i in range(3,0,-1):
     print(i,'', end='')
     time.sleep(1)
 
-x, y = 740, 1045
+aa()
+for i in range(400):
+    pyautogui.click()
+    if i % 10 == 0:
+        print(i)
 
-for i in range(1):
-    f = open('textfil', 'r')
-    for line in f.readlines():
-        pyautogui.moveTo(x, y, duration=2, tween=pyautogui.easeInOutQuad)
-        pyautogui.click()
+#x, y = 740, 1045
 
-        pyautogui.write(line, interval=0.1)
+#for i in range(1):
+ #   f = open('textfil', 'r')
+  #  for line in f.readlines():
+   #     pyautogui.moveTo(x, y, duration=2, tween=pyautogui.easeInOutQuad)
+    #    pyautogui.click()
 
-        pyautogui.moveTo(x, y, tween=pyautogui.easeInOutQuad)
-        pyautogui.click()
+#        pyautogui.write(line, interval=0.1)
 
-        pyautogui.press('enter')
-    f.close()
+ #       pyautogui.moveTo(x, y, tween=pyautogui.easeInOutQuad)
+  #      pyautogui.click()
+
+   #     pyautogui.press('enter')
+   # f.close()
 screenWidth, screenHeight = pyautogui.size()  # Returns two integers, the width and height of the screen. (The primary monitor, in multi-monitor setups.)
 currentMouseX, currentMouseY = pyautogui.position()  # Returns two integers, the x and y of the mouse cursor's current position.
 print(currentMouseX, currentMouseY)
