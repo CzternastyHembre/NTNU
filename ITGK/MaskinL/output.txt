@@ -1,0 +1,18 @@
+Epoch 1/8
+891/891 [==============================] - 10s 10ms/step - loss: 1.2065 - accuracy: 0.6167 - val_loss: 0.2463 - val_accuracy: 0.9263
+Epoch 2/8
+891/891 [==============================] - 8s 9ms/step - loss: 0.3139 - accuracy: 0.9056 - val_loss: 0.1712 - val_accuracy: 0.9480
+Epoch 3/8
+891/891 [==============================] - 7s 8ms/step - loss: 0.2062 - accuracy: 0.9375 - val_loss: 0.1197 - val_accuracy: 0.9673
+Epoch 4/8
+891/891 [==============================] - 8s 9ms/step - loss: 0.1399 - accuracy: 0.9585 - val_loss: 0.0760 - val_accuracy: 0.9813
+Epoch 5/8
+891/891 [==============================] - 7s 8ms/step - loss: 0.1038 - accuracy: 0.9678 - val_loss: 0.0709 - val_accuracy: 0.9850
+Epoch 6/8
+891/891 [==============================] - 9s 10ms/step - loss: 0.0821 - accuracy: 0.9755 - val_loss: 0.0830 - val_accuracy: 0.9780
+Epoch 7/8
+891/891 [==============================] - 9s 10ms/step - loss: 0.0721 - accuracy: 0.9782 - val_loss: 0.0575 - val_accuracy: 0.9863
+Epoch 8/8
+891/891 [==============================] - 8s 9ms/step - loss: 0.0674 - accuracy: 0.9796 - val_loss: 0.0534 - val_accuracy: 0.9887
+Test loss: 0.05617808923125267
+Test accuracy: 0.982200026512146

@@ -26,13 +26,39 @@ def aa():
 
 
 print('stating in: ', end='')
-for i in range(3,0,-1):
+for i in range(5,0,-1):
     print(i,'', end='')
     time.sleep(1)
 
-aa()
-for i in range(400):
+#aa()
+def bb() :
+
+    for i in range(3000):
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        pyautogui.click()
+        time.sleep(3)
+        if i % 10 == 0:
+            print(i)
+    for i in range(100):
+        for i in range(100):
+            pyautogui.click()
+            if i % 10 == 0:
+                print(i)
+        for i in range(100):
+            pyautogui.click()
+            pyautogui.click()
+            pyautogui.click()
+            pyautogui.click()
+            time.sleep(3)
+            if i % 10 == 0:
+                print(i)
+#bb()
+a = int(30)
+for i in range(a):
     pyautogui.click()
+    time.sleep(0.2)
     if i % 10 == 0:
         print(i)
 
